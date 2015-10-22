@@ -4,7 +4,174 @@
  *
  * Site Styles
  *****************************************************************************/
+/* 
+Requirements
+Offer MP4 and WEBM video in a default HTML5 video player.
+Style the containers and presentation of the audio and video to highlight the experience, making it more enjoyable for users.
+            <!-- TODO: Embed an audio player so users can play back the
+                 soundtrack MP3 directly on the page. -->
+            <!-- TODO: Style an elegant download link to download the video. -->
 
- html {
-     color: green;
- }
+<!-- TODO: Style the footer appropriately. --> 
+Right now you have only been supplied with a 1080p WEBM format video. Convert that video to an MP4 so more browsers can display the video with a native videoplayer. 
+(NOTE: Your MP4 version must be under 100mb, and it's best if it can be under 50mb, although in this one case it's OK as long as it's under 100mb in file size.)
+
+Create a new favicon that better represents the page as you've designed it.
+Add download icons to the download buttons.
+Use a video loop in the header (or somewhere else on the page) in order to create a compelling design.
+Add a homescreen icon for iOS and Android devices so when they save the page to their homescreen they get a custom icon that matches the favicon you designed.
+*/
+
+/*
+Base shades
+http://colorschemedesigner.com/csd-3.5/#3p61TtUOXw0w0
+*/
+html { 
+  background: url(../img/monkaa_monkeyhang.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
+}
+
+body {
+	width:800px;
+	margin:auto;
+	background:#78D0ED;
+	background: linear-gradient(to right, rgba(120,208,237,1), rgba(120,208,237,.0));
+	font-family: 'Bowlby One';
+/* 	color:#0D2592; */
+	color:#A65805;
+	
+	
+}
+
+header {
+	text-align: center;
+	color:white;
+	
+	
+}
+
+
+h1 img{
+	width: 100%; 
+	margin-bottom: -25px;
+	
+	
+	
+}
+
+
+.subtitle{
+
+	
+	margin:0;
+	
+}
+.main-nav {
+	
+	margin: 0;
+	padding:0;
+	
+}
+.main-nav li {
+	display: inline;
+	padding: 10px;
+}
+
+#social{
+	
+	width:200px;
+	height:250px;
+	background: url(../img/monkey_crystal_tail.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:200px;
+	position:fixed;
+	z-index:-1;
+	margin-left: 600px; 
+   <!-- TODO:  You may also use the
+                 `:hover` pseudoselector to trigger height or width changes
+                 that could help you make a more interactive design. -->
+}
+
+#social li {
+	display:inline;
+}
+
+#watch {
+
+}
+
+#listen {
+	
+}
+.padding-cont {
+	padding-right:200px;
+}
+h2{
+	margin:0;
+	margin-bottom:25px;
+	background:#3589A4; 
+	background: radial-gradient(ellipse at center,rgba(53,137,164,1), rgba(53,137,164,.0));
+	 color:#076D8E;
+    font-size:3em;
+    text-align:center;
+    text-shadow: 0 3px 3px #78D0ED; 
+	
+}
+
+.lead {
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+	font-family: 'Lemon';
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 30px;
+	color:#A65805;
+	background:#0FE558;
+	background: linear-gradient(180deg, rgba(118, 242, 164, 1), rgba(15, 229, 88, .0));
+}
+
+.weybec-people {
+	text-align: center;
+}
+.weybec-people li {
+	height:175px;
+	width:100px;
+	
+	color:blueviolet;
+	display:inline-block;
+	
+}
+.headshot_ps {
+	background: url("../img/weybec/pratik_solanki.gif");
+	background-size: 125px;
+    background-repeat: no-repeat;
+	background-position: bottom;
+}
+.headshot_nr {
+	background: url("../img/weybec/Nita-ravalji1.gif");
+	background-size: 125px;
+    background-repeat: no-repeat;
+	background-position: bottom;
+}
+.headshot_np {
+	background: url("../img/weybec/niyal_parmar.gif");
+	background-size: 125px;
+    background-repeat: no-repeat;
+	background-position: bottom;
+}
+.weybec-people {
+	padding:0;
+}
+
+
+footer {
+	background: #8497F0;
+}
