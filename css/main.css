@@ -6,20 +6,11 @@
  *****************************************************************************/
 /* 
 Requirements
-Offer MP4 and WEBM video in a default HTML5 video player.
-Style the containers and presentation of the audio and video to highlight the experience, making it more enjoyable for users.
-            <!-- TODO: Embed an audio player so users can play back the
-                 soundtrack MP3 directly on the page. -->
-            <!-- TODO: Style an elegant download link to download the video. -->
-
-<!-- TODO: Style the footer appropriately. --> 
-Right now you have only been supplied with a 1080p WEBM format video. Convert that video to an MP4 so more browsers can display the video with a native videoplayer. 
-(NOTE: Your MP4 version must be under 100mb, and it's best if it can be under 50mb, although in this one case it's OK as long as it's under 100mb in file size.)
 
 Create a new favicon that better represents the page as you've designed it.
-Add download icons to the download buttons.
-Use a video loop in the header (or somewhere else on the page) in order to create a compelling design.
-Add a homescreen icon for iOS and Android devices so when they save the page to their homescreen they get a custom icon that matches the favicon you designed.
+add a homescreen icon for iOS and Android devices so when they save the page to their homescreen they get a custom icon 
+that matches the favicon you designed.
+
 */
 
 /*
@@ -32,7 +23,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	
+	background-color:rgb(120,208,237);
 }
 
 body {
@@ -41,7 +32,6 @@ body {
 	background:#78D0ED;
 	background: linear-gradient(to right, rgba(120,208,237,1), rgba(120,208,237,.0));
 	font-family: 'Bowlby One';
-/* 	color:#0D2592; */
 	color:#A65805;
 	
 	
@@ -49,7 +39,7 @@ body {
 
 header {
 	text-align: center;
-	color:white;
+	color:#48F282;
 	
 	
 }
@@ -65,10 +55,13 @@ h1 img{
 
 
 .subtitle{
-
-	
 	margin:0;
+	font-size:145%;
 	
+	line-height: 30px;
+	 text-shadow: 0 3px 3px #000,
+		 			0 5px 5px #000;
+				
 }
 .main-nav {
 	
@@ -84,36 +77,58 @@ h1 img{
 #social{
 	
 	width:200px;
-	height:250px;
+	height:0;
 	background: url(../img/monkey_crystal_tail.jpg);
 	background-repeat: no-repeat;
-	background-position:center;
+	background-position:bottom;
 	background-size:200px;
+	
 	position:fixed;
-	z-index:-1;
+	
+	text-align:center;
 	margin-left: 600px; 
-   <!-- TODO:  You may also use the
-                 `:hover` pseudoselector to trigger height or width changes
-                 that could help you make a more interactive design. -->
 }
-
+#social:hover {
+	height:175px;	
+}
+#social img{
+	width:45px;
+	opacity:.50;
+	padding:0;
+	margin-left:3px;
+	margin-right:3px;	
+}
+#social ul {
+	padding:0;
+	margin:0;
+}
 #social li {
 	display:inline;
 }
 
+#social img:hover {
+	width:55px;
+	opacity:1;
+	padding:0;
+	margin-left:3px;
+	margin-right:3px;	
+}
 #watch {
-
+ text-align:center;
 }
 
 #listen {
-	
+	 text-align:center;
+}
+
+#about{
+	 text-align:center;
 }
 .padding-cont {
 	padding-right:200px;
 }
 h2{
 	margin:0;
-	margin-bottom:25px;
 	background:#3589A4; 
 	background: radial-gradient(ellipse at center,rgba(53,137,164,1), rgba(53,137,164,.0));
 	 color:#076D8E;
@@ -143,7 +158,7 @@ h2{
 }
 .weybec-people li {
 	height:175px;
-	width:100px;
+	width:150px;
 	
 	color:blueviolet;
 	display:inline-block;
@@ -158,6 +173,8 @@ h2{
 .headshot_nr {
 	background: url("../img/weybec/Nita-ravalji1.gif");
 	background-size: 125px;
+	margin-left:20px;
+	margin-right:20px;
     background-repeat: no-repeat;
 	background-position: bottom;
 }
@@ -171,7 +188,56 @@ h2{
 	padding:0;
 }
 
-
+.download-button img{
+	width:50px;
+	opacity:.75;
+}
 footer {
-	background: #8497F0;
+  height: 250px;
+
+  position: relative;
+  padding: 20px;
+}
+
+#video-container {
+	position: absolute;
+}
+#video-container {
+	top:0;
+	left:0;
+	height:95%;
+	width:100%;
+	overflow: hidden;
+}
+.footer-video {
+	position:absolute;
+	top:-100px;
+	padding-bottom:100px;
+}
+.fillWidth {
+	width: 100%;
+}
+
+#text-container {
+	padding-top:0;
+   	position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+	text-align:center;
+	font-family: 'Lemon';
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 35px;
+	color:#00FF56;
+	text-shadow: 0 4px 3px rgba(0,0,0,1),
+             	0 8px 13px rgba(0,0,0,0.4),
+            	 0 18px 23px rgba(0,0,0,0.4);
+	
+}
+
+#text-container p {
+	margin:10px;
 }
